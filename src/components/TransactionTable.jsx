@@ -1,5 +1,5 @@
 import React from "react";
-
+import './TransactionTable.css'
 const TransactionTable = ({ transactions, onDeleteTransaction }) => {
     const handleDelete = (transaction) => {
         onDeleteTransaction(transaction);
@@ -8,15 +8,17 @@ const TransactionTable = ({ transactions, onDeleteTransaction }) => {
     return (
         <>
         <h4>Transaction History</h4>
-         <table>
+          <table> 
            <thead>
               <tr>
                 <th>Date</th>
                 <th>Description</th>
                 <th>Category</th>
                 <th>Amount</th>
+                <th>Remove</th>     
               </tr>
-           </thead> 
+           </thead>
+           <tbody> 
             {transactions.map((transaction) => (
                 <tr key={transaction.id}>
                     <td>{transaction.date}</td>
@@ -28,7 +30,8 @@ const TransactionTable = ({ transactions, onDeleteTransaction }) => {
                     </td>
                 </tr>
                 ))}
-             </table> 
+              </tbody>   
+            </table> 
             
         </>
     );
