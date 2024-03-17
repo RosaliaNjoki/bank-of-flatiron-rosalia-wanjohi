@@ -16,6 +16,26 @@ const BankForm = ({ onAddTransaction }) => {
             amount
         };
         onAddTransaction(newTransaction);
+
+        fetch('https://bank-of-flatiron-i1de.onrender.com/transactions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newTransaction),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to add transaction');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Handle successful response if needed
+        })
+        .catch(error => {
+            console.error('Error adding transaction:', error);
+        });
         
         setDate('');
         setDescription('');
@@ -40,9 +60,9 @@ const BankForm = ({ onAddTransaction }) => {
                     <option value="Housing">Housing</option>
                 </select>
                 <input placeholder = "Amount" type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
-                 
+                <button  type="submit">Add Transaction</button>
         </form>
-        <button className="t-button" type="submit">Add Transaction</button>
+       
     </>    
     );
 };

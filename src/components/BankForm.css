@@ -1,11 +1,11 @@
 .transaction-form {
     display: flex;
     flex-direction: row;
-    gap: 7px;
+    gap: 5px;
     align-items: flex-start;
 }
 .transaction-form label {
-    width: 10%;
+    width: 70px;
     margin: 15px;
     height: 20px;
     font-size: 16px;  
@@ -14,7 +14,7 @@
     padding: 7px 0;
 }
 .transaction-form input {
-    width: 35%;
+    width: 200px;
     padding: 5px;
     margin: 15px;
     height: 20px;
@@ -28,14 +28,14 @@ input::placeholder {
     opacity: 0.5; 
 }
 .transaction-form select {
-        width: 35%;
+        width: 200px;
         padding: 5px;
         margin: 15px;
         height: 35px;
     
         }
 
-.t-button {
+/* .transaction-form button {
     display: -moz-grid-line;
     justify-content: space-between;
     margin-top: 20px; 
@@ -43,6 +43,18 @@ input::placeholder {
     margin-right: 20px;
 
 
+} */
+.transaction-form button {
+    display: flex;
+    flex: 1;
+    width: 160px;
+    flex-direction: row;
+    justify-content: flex-end; /* Align buttons to the end of the row */
+    margin-top: 10px; /* Adjust top margin as needed */
+}
+
+.button-group button {
+    margin-left: 10px; /* Add spacing between buttons */
 }
 
 
