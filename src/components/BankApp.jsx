@@ -3,6 +3,8 @@ import BankForm from "./BankForm";
 import TransactionTable from './TransactionTable';
 import SearchBar from './SearchBar';
 import Header from './Header';
+import './BankApp.css';
+
 
 const BankApp = () => {
     const [transactions, setTransactions] = useState([]);
@@ -67,9 +69,9 @@ const BankApp = () => {
             <Header/>
             <SearchBar searchTerm={searchTerm} onSearch={handleSearch} />
             <BankForm onAddTransaction={handleAddTransaction}/>
-            <button onClick={() => sortTransactionsBy('category')}>Sort by Category</button>
-            <button onClick={() => sortTransactionsBy('description')}>Sort by Description</button>
-            {sortCriteria && <span>Sorted by {sortCriteria}</span>}
+            <button className= "button" onClick={() => sortTransactionsBy('description')}>Sort by Description</button>
+            <button className = "button" onClick={() => sortTransactionsBy('category')}>Sort by Category</button>
+             {sortCriteria && <span className="instructions">Sorted by {sortCriteria}</span>} 
             <TransactionTable transactions={filteredTransactions} onDeleteTransaction={handleDeleteTransaction} />
         </div>
     );

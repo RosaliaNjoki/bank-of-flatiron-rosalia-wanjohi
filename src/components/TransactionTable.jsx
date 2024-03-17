@@ -7,6 +7,16 @@ const TransactionTable = ({ transactions, onDeleteTransaction }) => {
 
     return (
         <>
+        <h4>Transaction History</h4>
+         <table>
+           <thead>
+              <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Amount</th>
+              </tr>
+           </thead> 
             {transactions.map((transaction) => (
                 <tr key={transaction.id}>
                     <td>{transaction.date}</td>
@@ -17,7 +27,9 @@ const TransactionTable = ({ transactions, onDeleteTransaction }) => {
                         <button onClick={() => handleDelete(transaction)}>Delete</button>
                     </td>
                 </tr>
-            ))}
+                ))}
+             </table> 
+            
         </>
     );
 };

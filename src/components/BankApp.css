@@ -1,0 +1,15 @@
+.button {
+    display: -moz-grid-line;
+    justify-content: space-between;
+    margin-top: 20px; 
+    flex: 1;
+    margin-right: 20px;
+}
+
+
+.instructions {
+Background-color: blue;
+padding: 5px 10px; 
+border-radius: 5px;
+
+}
