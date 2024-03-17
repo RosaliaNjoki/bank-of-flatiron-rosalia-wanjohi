@@ -31,7 +31,7 @@ const BankForm = ({ onAddTransaction }) => {
             return response.json();
         })
         .then(data => {
-            // Handle successful response if needed
+            
         })
         .catch(error => {
             console.error('Error adding transaction:', error);

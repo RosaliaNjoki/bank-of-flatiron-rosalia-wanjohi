@@ -34,27 +34,17 @@ input::placeholder {
         height: 35px;
     
         }
-
-/* .transaction-form button {
-    display: -moz-grid-line;
-    justify-content: space-between;
-    margin-top: 20px; 
-    flex: 1;
-    margin-right: 20px;
-
-
-} */
 .transaction-form button {
     display: flex;
     flex: 1;
     width: 160px;
     flex-direction: row;
-    justify-content: flex-end; /* Align buttons to the end of the row */
-    margin-top: 10px; /* Adjust top margin as needed */
+    justify-content: flex-end; 
+    margin-top: 10px; 
 }
 
 .button-group button {
-    margin-left: 10px; /* Add spacing between buttons */
+    margin-left: 10px;
 }
 
 
