@@ -11,7 +11,7 @@ const BankApp = () => {
     const [sortCriteria, setSortCriteria] = useState('');
 
     useEffect(() => {
-        fetch("http://localhost:3000/transactions")
+        fetch("https://bank-of-flatiron-i1de.onrender.com/transactions")
             .then(response => response.json())
             .then(data => {
                 setTransactions(data);
@@ -26,7 +26,7 @@ const BankApp = () => {
     }
 
     const handleDeleteTransaction = (deletedTransaction) => {
-        fetch(`http://localhost:3000/transactions/${deletedTransaction.id}`, {
+        fetch(`https://bank-of-flatiron-i1de.onrender.com/transactions/${deletedTransaction.id}`, {
             method: 'DELETE'
         })
         .then(response => {
